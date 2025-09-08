@@ -1,0 +1,18 @@
+create table student(sid INTEGER,sname VARCHAR(20),marks INTEGER,branch varchar(20));
+insert into student values(101,'rani',80,'cse');
+insert into student values(102,'raju',90,'ece');
+insert into student values(103,'ravi',70,'eee');
+insert into student values(104,'ragu',80,'me');
+insert into student values(105,'raji',90,'ce');
+select *from student;
+create view cse_student as select * from student where branch='cse';
+create view ece_student as select * from student where branch='ece';
+create view eee_student as select * from student where branch='eee';
+create view me_student as select * from student where branch='me';
+create view ce_student as select * from student where branch='ce';
+update student set marks=95 where sid=101;
+select *from cse_student;
+select *from ece_student;
+select *from eee_student;
+select *from me_student;
+select *from ce_student;
